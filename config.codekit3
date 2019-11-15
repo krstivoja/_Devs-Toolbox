@@ -4,7 +4,7 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "69490F56-9140-4CC7-B404-C506833DDFB8"
+		"uuidString": "C0A2BF32-99C2-4C50-AA8A-75A04A71238D"
 		}
 	],
 "creatorBuild": "31934",
@@ -264,16 +264,16 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 595546198.00874197,
-	"displayValue": "Academy",
-	"displayValueWasSetByUser": 1,
-	"iconImageName": "brackets-brick",
+	"creationDate": 595547637.43041503,
+	"displayValue": "Developers-Toolbox-by-OxySet",
+	"displayValueWasSetByUser": 0,
+	"iconImageName": "brackets_teal",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"allowInjectionReloads": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
@@ -1746,7 +1746,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://academy.local/",
+	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2337,7 +2337,7 @@
 	"npmInstallOptionalDependencies": 0,
 	"npmSaveExactVersion": 0,
 	"npmTargetDependencyListType": 1,
-	"overrideExternalServerCSS": 1,
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
