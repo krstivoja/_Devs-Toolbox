@@ -13,7 +13,7 @@
  - js
 
 ### SCSS Files structure:
-custom.scss
+- oxyset_dev-core.scss
 - _00_mixin.scss
 - _00_variables.scss
 - _1_base.scss
