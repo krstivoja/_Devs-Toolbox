@@ -14,17 +14,17 @@
 
 ### SCSS Files structure:
 custom.scss
-_00_mixin.scss
-_00_variables.scss
-_1_base.scss
-_2_typography.scss
-_3_header.scss
-_4_footer.scss
-_5_page.scss
-_6_archive-post.scss
-_7_archive-cpt.scss
-_8_single.scss
-_9_single-cpt.scss
+- _00_mixin.scss
+- _00_variables.scss
+- _1_base.scss
+- _2_typography.scss
+- _3_header.scss
+- _4_footer.scss
+- _5_page.scss
+- _6_archive-post.scss
+- _7_archive-cpt.scss
+- _8_single.scss
+
 
 
 ## Installation
