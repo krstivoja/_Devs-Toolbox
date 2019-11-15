@@ -1,0 +1,79 @@
+// Colors
+
+$brand:     #4a2be7;
+$accent:    #ea533c;
+$bg:        #ffffff;
+$bg_sec:    #f4f4f4;
+$text:      #161616;
+$text_sec:  #ffffff;
+
+
+// Brakepoints
+  
+$mobile:      480px;
+$tablet:      768px;
+$laptop:      992px;
+$desktop:     1440px;
+
+
+// Outlines
+$pri_line: 2px solid $text;
+$sec_line: 2px solid rgba( $text, .5 );
+
+
+// Space 
+$space_x: 10px;
+$space_xx: 20px;
+$space_xxx: 40px;
+$space_xxxx: 80px;
+
+
+// Brake points
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+
+//Transitions 
+
+@mixin trans {
+	transition: all 0.3s ease;
+}
+
+
+// Test outline border
+
+@mixin border{
+  border: solid red 1px;
+}
+
+
