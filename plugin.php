@@ -2,7 +2,7 @@
 /*
 Plugin Name:	Developers Toolbox by OxySet
 Plugin URI:		https://oxyset.com/
-Description:	Load JS & CSS for custom developmenn
+Description:	Included CSS and jQuery for custom development. Powered with organized SCSS partials.
 Version:		1.0.0
 Author:			Marko Krstic
 Author URI:		https://markokrstic.com
