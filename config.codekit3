@@ -9,22 +9,22 @@
 	],
 "creatorBuild": "31934",
 "files": {
-	"/assets/css/dev__core.css": {
+	"/assets/css/theme_styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/assets/css/dev__core-min.css",
+		"oAP": "/assets/css/theme_styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/css/dev__core.css.map": {
+	"/assets/css/theme_styles.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/assets/css/dev__core.css.map",
+		"oAP": "/assets/css/theme_styles.css.map",
 		"oF": 0
 		},
 	"/assets/images/.keep": {
@@ -43,13 +43,13 @@
 		"oAP": "/assets/js/.keep",
 		"oF": 0
 		},
-	"/assets/js/dev__core.js": {
+	"/assets/js/theme_scripts.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/js/dev__core-min.js",
+		"oAP": "/assets/js/theme_scripts-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -158,7 +158,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/assets/scss/dev__core.scss": {
+	"/assets/scss/theme_styles.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -166,7 +166,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/assets/css/dev__core.css",
+		"oAP": "/assets/css/theme_styles.css",
 		"oF": 1,
 		"oS": 3,
 		"uL": 1
