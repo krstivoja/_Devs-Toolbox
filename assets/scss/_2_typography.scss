@@ -3,12 +3,12 @@
 }
 
 
-html h1,
-html h2,
-html h3,
-html h4,
-html h5,
-html h6{
+.oxygen-body h1,
+.oxygen-body h2,
+.oxygen-body h3,
+.oxygen-body h4,
+.oxygen-body h5,
+.oxygen-body h6{
     font-family: 'title';
     font-weight: normal;
     font-style: normal;    
@@ -17,17 +17,17 @@ html h6{
 }
 
 
-html, html body{
+.oxygen-body body{
     font-family: 'body';
     font-weight: normal;
     font-style: normal;
 }
 
-html h1{
-    
+h1{
+    font-size: 150px;
 }
 
-html h2{
+.oxygen-body h2{
     
 }
 

@@ -4,35 +4,27 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "C0A2BF32-99C2-4C50-AA8A-75A04A71238D"
+		"uuidString": "22C46C5B-F7FD-46A4-BE53-2823AA87B7CE"
 		}
 	],
 "creatorBuild": "31934",
 "files": {
-	"/assets/css/.keep": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/css/.keep",
-		"oF": 0
-		},
-	"/assets/css/oxyset_dev-core.css": {
+	"/assets/css/dev__core.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/assets/css/oxyset_dev-core-min.css",
+		"oAP": "/assets/css/dev__core-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/css/oxyset_dev-core.css.map": {
+	"/assets/css/dev__core.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/assets/css/oxyset_dev-core.css.map",
+		"oAP": "/assets/css/dev__core.css.map",
 		"oF": 0
 		},
 	"/assets/images/.keep": {
@@ -51,13 +43,13 @@
 		"oAP": "/assets/js/.keep",
 		"oF": 0
 		},
-	"/assets/js/oxyset_dev-core.js": {
+	"/assets/js/dev__core.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/js/oxyset_dev-core-min.js",
+		"oAP": "/assets/js/dev__core-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -166,7 +158,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/assets/scss/oxyset_dev-core.scss": {
+	"/assets/scss/dev__core.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -174,8 +166,8 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/assets/css/oxyset_dev-core.css",
-		"oF": 0,
+		"oAP": "/assets/css/dev__core.css",
+		"oF": 1,
 		"oS": 3,
 		"uL": 1
 		},
@@ -209,12 +201,6 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
-	"/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/node_modules",
-		"oF": 0
-		},
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -237,6 +223,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugin.php",
+		"oF": 0
+		},
+	"/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
 		"oF": 0
 		},
 	"/README.md": {
@@ -265,7 +259,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 595547637.43041503,
-	"displayValue": "Developers-Toolbox-by-OxySet",
+	"displayValue": "Devs-Toolbox",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_teal",
 	"iconImageWasSetByUser": 0
