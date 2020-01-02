@@ -1,16 +1,17 @@
 // Colors
 
 $brand:     #4a2be7;
-$accent:    #ea533c;
+$action:    #ea533c;
 $bg:        #ffffff;
-$bg_sec:    #f4f4f4;
+$bg2:       #f4f4f4;
+$bg3:       #f4f4f4;
 $text:      #161616;
-$text_sec:  #ffffff;
+$text2:     #ffffff;
+$text3:     #ffffff;
 
 
 // Brakepoints
-  
-$mobile:      480px;
+$mobile:      479px;
 $tablet:      767px;
 $laptop:      991px;
 $desktop:     1439px;
@@ -56,7 +57,7 @@ $space_xxxx: 80px;
   }
 }
 
-@mixin desktop-xl {
+@mixin large {
   @media (min-width: $desktop) {
     @content;
   }

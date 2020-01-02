@@ -10,6 +10,16 @@
 .oxygen-body h5,
 .oxygen-body h6{
     font-family: 'title';
+    font-family: serif !important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
     font-weight: normal;
     font-style: normal;    
     line-height: 1.2;
@@ -17,17 +27,15 @@
 }
 
 
-.oxygen-body body{
-    font-family: 'body';
-    font-weight: normal;
-    font-style: normal;
+.oxygen-body{
+    font-family: serif;
 }
 
 h1{
     font-size: 150px;
 }
 
-.oxygen-body h2{
+h2{
     
 }
 

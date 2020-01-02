@@ -2,8 +2,8 @@
 /*
 Plugin Name:	_ Devs Toolbox
 Plugin URI:		https://oxyset.com/
-Description:	Included CSS and jQuery for custom development. Powered with organized SCSS partials.
-Version:		1.0.1
+Description:	Theme Files for custom development. Powered with organized SCSS partials.
+Version:		1.0.0
 Author:			OxySet
 Author URI:		https://oxyset.com
 License:		GPL-2.0+
@@ -27,15 +27,9 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-function theme_scripts() {
-	wp_enqueue_script( 'core_js', plugin_dir_url( __FILE__ ) . 'assets/js/theme_scripts.js', '', '1.0.0', true );
-
-}
-
-add_action( 'wp_enqueue_scripts', 'theme_scripts');
-
 
 function theme_styles() {
-    wp_enqueue_style( 'style-name', plugin_dir_url( __FILE__ ) . 'assets/css/theme_styles.css', array(), null );
+	wp_enqueue_script( 'theme_scripts', plugin_dir_url( __FILE__ ) . 'assets/js/theme_scripts.js', '', '1.0.0', true );
+    wp_enqueue_style( 'theme_styles', plugin_dir_url( __FILE__ ) . 'assets/css/theme_styles.css', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles',  100, 1 ) ;

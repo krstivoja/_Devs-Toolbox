@@ -1,11 +1,12 @@
 // Variables & Mixins
-@import "_1_base.scss";
+@import "_0_base.scss";
+@import "_1_layout.scss";
 
 // Import fonts and Typography
 @import "_2_typography.scss";
 
 // Buttons & Input fields
-@import "_3_form.scss";
+//@import "_3_form.scss";
 
 // Global components
 @import "_4_header.scss";
@@ -16,3 +17,5 @@
 @import "_7_archive.scss";
 @import "_8_single.scss";
 
+// Animation
+@import "_9_animations.scss";
