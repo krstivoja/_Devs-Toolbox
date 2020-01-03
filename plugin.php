@@ -22,11 +22,23 @@ along with This plugin. If not, see {URI to Plugin License}.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
+/*=======================================
+=            Include Scripts            =
+=======================================*/
+add_action( 'wp_enqueue_scripts', 'theme_scripts');
+
 function theme_scripts() {
 	wp_enqueue_script( 'core_js', plugin_dir_url( __FILE__ ) . 'assets/js/theme_scripts.js', '', '1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'theme_scripts');
+
+
+/*=======================================
+=            Inslcude Styles            =
+=======================================*/
+add_action( 'wp_enqueue_scripts', 'theme_styles',  100, 1 ) ;
+
 function theme_styles() {
     wp_enqueue_style( 'style-name', plugin_dir_url( __FILE__ ) . 'assets/css/theme_styles.css', array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'theme_styles',  100, 1 ) ;
+
