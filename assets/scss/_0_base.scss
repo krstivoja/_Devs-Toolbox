@@ -1,8 +1,10 @@
-// Colors
+/*==============================
+=            Colors            =
+==============================*/
 
 $brand:     #4a2be7;
 $action:    #ea533c;
-$bg:        #ffffff;
+$bg1:        #ffffff;
 $bg2:       #f4f4f4;
 $bg3:       #f4f4f4;
 $text:      #161616;
@@ -10,29 +12,35 @@ $text2:     #ffffff;
 $text3:     #ffffff;
 
 
-// Brakepoints
-$mobile:      479px;
-$tablet:      767px;
-$laptop:      991px;
-$desktop:     1439px;
+
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+// Breakpoints Variables
+$desktop:     1680px;
+$laptop:      1200px;
+$tablet:      900px;
+$mobile:      600px;
 
 
-// Outlines
-$pri_line: 2px solid $text;
-$sec_line: 2px solid rgba( $text, .5 );
 
+// Breakpoints Mixin
 
-// Space 
-$space_x: 10px;
-$space_xx: 20px;
-$space_xxx: 40px;
-$space_xxxx: 80px;
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
 
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
 
-// Brake points
-
-@mixin mobile {
-  @media (max-width: $mobile) {
+@mixin laptop {
+  @media (max-width: $laptop) {
     @content;
   }
 }
@@ -42,39 +50,33 @@ $space_xxxx: 80px;
     @content;
   }
 }
-
-
-@mixin laptop {
-  @media (max-width: $laptop) {
+@mixin mobile {
+  @media (max-width: $mobile) {
     @content;
   }
 }
 
 
-@mixin desktop {
-  @media (max-width: $desktop) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media (min-width: $desktop) {
-    @content;
-  }
-}
-
-
-//Transitions 
-
+/*===================================
+=            Transitions            =
+===================================*/
 @mixin trans {
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
+}
+
+@mixin trans_6 {
+  transition: all 0.6s ease;
+}
+
+@mixin trans_9 {
+  transition: all 0.9s ease;
 }
 
 
-// Test outline border
 
+/*===================================
+=            Test Border            =
+===================================*/
 @mixin border{
   border: solid red 1px;
 }
-
-

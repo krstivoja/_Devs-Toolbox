@@ -43,6 +43,17 @@
 		"oAP": "/assets/js/.keep",
 		"oF": 0
 		},
+	"/assets/js/animations.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/animations-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"/assets/js/theme_scripts.js": {
 		"bF": 0,
 		"ft": 64,
@@ -171,19 +182,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/assets/scss/_9_animations.scss": {
-		"aP": 1,
-		"bl": 1,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/assets/css/_9_animations.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"/assets/scss/theme_styles.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -197,51 +195,19 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/folders-&-files-structure.png": {
-		"ft": 32768,
-		"iS": 12739,
-		"oA": 0,
-		"oAP": "/folders-&-files-structure.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/github.png": {
-		"ft": 32768,
-		"iS": 10316,
-		"oA": 0,
-		"oAP": "/github.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/LICENSE": {
+	"/inc/cpt_and_tax.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/LICENSE",
+		"oAP": "/inc/cpt_and_tax.php",
 		"oF": 0
 		},
-	"/package-lock.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-lock-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
 		},
 	"/plugin.php": {
 		"cB": 0,
@@ -250,33 +216,6 @@
 		"oA": 0,
 		"oAP": "/plugin.php",
 		"oF": 0
-		},
-	"/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/README.html",
-		"oF": 0
-		},
-	"/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
 		}
 	},
 "hooks": [
@@ -285,7 +224,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 595547637.43041503,
-	"displayValue": "_Devs-Toolbox",
+	"displayValue": "_Devs-Toolbox-1.2.0",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_teal",
 	"iconImageWasSetByUser": 0
@@ -293,7 +232,7 @@
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"allowInjectionReloads": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
@@ -1766,7 +1705,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888",
+	"externalServerAddress": "https://projectdev.cc/swiss/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

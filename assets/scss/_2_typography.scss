@@ -10,7 +10,7 @@
 .oxygen-body h5,
 .oxygen-body h6{
     font-family: 'title';
-    font-family: serif !important;
+    font-family: serif;
 }
 
 
@@ -26,18 +26,45 @@ h6{
     margin-bottom: 0.5em;
 }
 
-
-.oxygen-body{
-    font-family: serif;
-}
-
 h1{
-    font-size: 150px;
+	font-size: 3.375em;
+
+    @include mobile{
+    	font-size: 2.369em;
+    }
 }
 
 h2{
-    
+    font-size: 2.25em;
+
+    @include mobile{
+    	font-size: 1.777em;
+    }
 }
+
+h3{
+    font-size: 1.5em;
+
+    @include mobile{
+    	font-size: 1.333em;
+    }
+}
+
+h4{
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+
+.oxygen-body{
+    font-family: sans-serif;
+    font-size: 18px;
+
+    @include mobile{
+    	font-size: 16px;
+    }
+}
+
 
 
 
