@@ -26,6 +26,21 @@ h6{
     margin-bottom: 0.5em;
 }
 
+/*====================================================
+=            Resizable typography example            =
+====================================================*/
+
+//h1{
+    //@include responsive-font(3vw, 30px, 48px);
+    //line-height: 1.1 !important;
+    //margin-bottom: 0.2em;
+    
+    // @include mobile{
+    //  font-size: 2.369em;
+    // }
+//}
+
+
 h1{
 	font-size: 3.375em;
 
