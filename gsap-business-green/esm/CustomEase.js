@@ -1,8 +1,8 @@
 /*!
- * CustomEase 3.0.4
+ * CustomEase 3.3.3
  * https://greensock.com
  *
- * @license Copyright 2008-2019, GreenSock. All rights reserved.
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -121,9 +121,7 @@ _bezierToPoints = function _bezierToPoints(x1, y1, x2, y2, x3, y3, x4, y4, thres
   return points;
 };
 
-export var CustomEase =
-/*#__PURE__*/
-function () {
+export var CustomEase = /*#__PURE__*/function () {
   function CustomEase(id, data, config) {
     if (!_coreInitted) {
       _initCore();
@@ -384,5 +382,5 @@ function () {
   return CustomEase;
 }();
 _getGSAP() && gsap.registerPlugin(CustomEase);
-CustomEase.version = "3.0.4";
+CustomEase.version = "3.3.3";
 export { CustomEase as default };

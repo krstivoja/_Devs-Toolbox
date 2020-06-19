@@ -1,0 +1,14 @@
+{
+  "name": "codekit-project",
+  "version": "1.0.0",
+  "description": "CodeKit created this starter package.json file. You should customize it appropriately.",
+  "scripts": {},
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": {},
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "glightbox": "^2.0.6",
+    "gsap": "^3.3.3"
+  }
+}

@@ -1,8 +1,8 @@
 /*!
- * VelocityTracker: 3.0.4
+ * VelocityTracker: 3.3.3
  * https://greensock.com
  *
- * Copyright 2008-2019, GreenSock. All rights reserved.
+ * Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -85,9 +85,7 @@ var PropTracker = function PropTracker(target, property, type, next) {
   }
 };
 
-export var VelocityTracker =
-/*#__PURE__*/
-function () {
+export var VelocityTracker = /*#__PURE__*/function () {
   function VelocityTracker(target, property) {
     if (!_coreInitted) {
       _initCore();
@@ -108,15 +106,10 @@ function () {
   var _proto = VelocityTracker.prototype;
 
   _proto.get = function get(property, skipRecentTick) {
-    var pt = this._props[property],
+    var pt = this._props[property] || console.warn("Not tracking " + property + " velocity."),
         val,
         dif,
         rotationCap;
-
-    if (!pt) {
-      console.warn("Not tracking " + property + " velocity.");
-    }
-
     val = parseFloat(skipRecentTick ? pt.v1 : pt.g(pt.t, pt.p));
     dif = val - parseFloat(pt.v2);
     rotationCap = pt.rCap;

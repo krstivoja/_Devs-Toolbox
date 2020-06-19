@@ -18,7 +18,7 @@
 	},
 	    _roundingNum = 1e5,
 	    _round = function _round(value) {
-	  return ~~(value * _roundingNum + (value < 0 ? -.5 : .5)) / _roundingNum;
+	  return Math.round(value * _roundingNum) / _roundingNum || 0;
 	},
 	    _copyMetaData = function _copyMetaData(source, copy) {
 	  copy.totalLength = source.totalLength;
@@ -69,11 +69,7 @@
 	  x2 += (x2a - x2) * t;
 	  y2 += (y2a - y2) * t;
 	  segment.splice(i + 2, 4, _round(x1a), _round(y1a), _round(x1), _round(y1), _round(x1 + (x2 - x1) * t), _round(y1 + (y2 - y1) * t), _round(x2), _round(y2), _round(x2a), _round(y2a));
-
-	  if (segment.samples) {
-	    segment.samples.splice(i / 6 * segment.resolution | 0, 0, 0, 0, 0, 0, 0, 0);
-	  }
-
+	  segment.samples && segment.samples.splice(i / 6 * segment.resolution | 0, 0, 0, 0, 0, 0, 0, 0);
 	  return 6;
 	}
 	function transformRawPath(rawPath, a, b, c, d, tx, ty) {
@@ -149,9 +145,7 @@
 	      angleStart = (uy < 0 ? -1 : 1) * Math.acos(ux / _sqrt(temp)),
 	      angleExtent = (ux * vy - uy * vx < 0 ? -1 : 1) * Math.acos((ux * vx + uy * vy) / _sqrt(temp * (vx * vx + vy * vy)));
 
-	  if (isNaN(angleExtent)) {
-	    angleExtent = PI;
-	  }
+	  isNaN(angleExtent) && (angleExtent = PI);
 
 	  if (!sweepFlag && angleExtent > 0) {
 	    angleExtent -= TWOPI;
@@ -428,6 +422,7 @@
 	      segment = [x, y, x, y],
 	      dx2 = nextX - x,
 	      dy2 = nextY - y,
+	      closed = Math.abs(points[l] - x) < 0.001 && Math.abs(points[l + 1] - y) < 0.001,
 	      prevX,
 	      prevY,
 	      angle,
@@ -445,6 +440,16 @@
 
 	  if (isNaN(cornerThreshold)) {
 	    cornerThreshold = Math.PI / 10;
+	  }
+
+	  if (closed) {
+	    points.push(nextX, nextY);
+	    nextX = x;
+	    nextY = y;
+	    x = points[l - 2];
+	    y = points[l - 1];
+	    points.unshift(x, y);
+	    l += 4;
 	  }
 
 	  curviness = curviness || curviness === 0 ? +curviness : 1;
@@ -484,6 +489,12 @@
 	  }
 
 	  segment.push(_round(nextX), _round(nextY), _round(nextX), _round(nextY));
+
+	  if (closed) {
+	    segment.splice(0, 6);
+	    segment.length = segment.length - 6;
+	  }
+
 	  return segment;
 	}
 
@@ -672,6 +683,7 @@
 	    _identityMatrix,
 	    _transformProp = "transform",
 	    _transformOriginProp = _transformProp + "Origin",
+	    _hasOffsetBug,
 	    _setDoc = function _setDoc(element) {
 	  var doc = element.ownerDocument || element;
 
@@ -689,9 +701,37 @@
 	    _doc = doc;
 	    _docElement = doc.documentElement;
 	    _body = doc.body;
+	    var d1 = doc.createElement("div"),
+	        d2 = doc.createElement("div");
+
+	    _body.appendChild(d1);
+
+	    d1.appendChild(d2);
+	    d1.style.position = "static";
+	    d1.style[_transformProp] = "translate3d(0,0,1px)";
+	    _hasOffsetBug = d2.offsetParent !== d1;
+
+	    _body.removeChild(d1);
 	  }
 
 	  return doc;
+	},
+	    _forceNonZeroScale = function _forceNonZeroScale(e) {
+	  var a, cache;
+
+	  while (e && e !== _body) {
+	    cache = e._gsap;
+
+	    if (cache && !cache.scaleX && !cache.scaleY && cache.renderTransform) {
+	      cache.scaleX = cache.scaleY = 1e-4;
+	      cache.renderTransform(1, cache);
+	      a ? a.push(cache) : a = [cache];
+	    }
+
+	    e = e.parentNode;
+	  }
+
+	  return a;
 	},
 	    _svgTemps = [],
 	    _divTemps = [],
@@ -732,7 +772,7 @@
 	          _divContainer.style.cssText = css;
 	        }
 
-	        e.style.cssText = css + "width:1px;height:1px;top:" + y + "px;left:" + x + "px";
+	        e.style.cssText = css + "width:0.1px;height:0.1px;top:" + y + "px;left:" + x + "px";
 
 	        _divContainer.appendChild(e);
 	      } else {
@@ -740,8 +780,8 @@
 	          _svgContainer = _createSibling(element);
 	        }
 
-	        e.setAttribute("width", 1);
-	        e.setAttribute("height", 1);
+	        e.setAttribute("width", 0.01);
+	        e.setAttribute("height", 0.01);
 	        e.setAttribute("transform", "translate(" + x + "," + y + ")");
 
 	        _svgContainer.appendChild(e);
@@ -753,7 +793,17 @@
 
 	  throw "Need document and parent.";
 	},
-	    _placeSiblings = function _placeSiblings(element) {
+	    _consolidate = function _consolidate(m) {
+	  var c = new Matrix2D(),
+	      i = 0;
+
+	  for (; i < m.numberOfItems; i++) {
+	    c.multiply(m.getItem(i).matrix);
+	  }
+
+	  return c;
+	},
+	    _placeSiblings = function _placeSiblings(element, adjustGOffset) {
 	  var svg = _svgOwner(element),
 	      isRootSVG = element === svg,
 	      siblings = svg ? _svgTemps : _divTemps,
@@ -778,32 +828,52 @@
 	      x: 0,
 	      y: 0
 	    } : element.getBBox();
-	    m = element.transform ? element.transform.baseVal : [];
+	    m = element.transform ? element.transform.baseVal : {};
 
-	    if (m.length) {
-	      m = m.consolidate().matrix;
+	    if (m.numberOfItems) {
+	      m = m.numberOfItems > 1 ? _consolidate(m) : m.getItem(0).matrix;
 	      x = m.a * b.x + m.c * b.y;
 	      y = m.b * b.x + m.d * b.y;
 	    } else {
 	      m = _identityMatrix;
+	      x = b.x;
+	      y = b.y;
+	    }
 
-	      if (element.tagName.toLowerCase() === "g") {
-	        x = y = 0;
-	      } else {
-	        x = b.x;
-	        y = b.y;
-	      }
+	    if (adjustGOffset && element.tagName.toLowerCase() === "g") {
+	      x = y = 0;
 	    }
 
 	    container.setAttribute("transform", "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + (m.e + x) + "," + (m.f + y) + ")");
 	    (isRootSVG ? svg : element.parentNode).appendChild(container);
 	  } else {
-	    container.style.top = element.offsetTop + "px";
-	    container.style.left = element.offsetLeft + "px";
+	    x = y = 0;
+
+	    if (_hasOffsetBug) {
+	      m = element.offsetParent;
+	      b = element;
+
+	      while (b && (b = b.parentNode) && b !== m && b.parentNode) {
+	        if ((_win.getComputedStyle(b)[_transformProp] + "").length > 4) {
+	          x = b.offsetLeft;
+	          y = b.offsetTop;
+	          b = 0;
+	        }
+	      }
+	    }
+
+	    b = container.style;
+	    b.top = element.offsetTop - y + "px";
+	    b.left = element.offsetLeft - x + "px";
 	    m = _win.getComputedStyle(element);
-	    container.style[_transformProp] = m[_transformProp];
-	    container.style[_transformOriginProp] = m[_transformOriginProp];
-	    container.style.position = m.position === "fixed" ? "fixed" : "absolute";
+	    b[_transformProp] = m[_transformProp];
+	    b[_transformOriginProp] = m[_transformOriginProp];
+	    b.border = m.border;
+	    b.borderLeftStyle = m.borderLeftStyle;
+	    b.borderTopStyle = m.borderTopStyle;
+	    b.borderLeftWidth = m.borderLeftWidth;
+	    b.borderTopWidth = m.borderTopWidth;
+	    b.position = m.position === "fixed" ? "fixed" : "absolute";
 	    element.parentNode.appendChild(container);
 	  }
 
@@ -857,7 +927,7 @@
 	        d = this.d,
 	        e = this.e,
 	        f = this.f,
-	        determinant = a * d - b * c;
+	        determinant = a * d - b * c || 1e-10;
 	    return _setMatrix(this, d / determinant, -b / determinant, -c / determinant, a / determinant, (c * f - d * e) / determinant, -(a * f - b * e) / determinant);
 	  };
 
@@ -875,6 +945,10 @@
 	        e2 = matrix.e,
 	        f2 = matrix.f;
 	    return _setMatrix(this, a2 * a + c2 * c, a2 * b + c2 * d, b2 * a + d2 * c, b2 * b + d2 * d, e + e2 * a + f2 * c, f + e2 * b + f2 * d);
+	  };
+
+	  _proto.clone = function clone() {
+	    return new Matrix2D(this.a, this.b, this.c, this.d, this.e, this.f);
 	  };
 
 	  _proto.equals = function equals(matrix) {
@@ -900,21 +974,22 @@
 	        d = this.d,
 	        e = this.e,
 	        f = this.f;
-	    decoratee.x = x * a + y * c + e;
-	    decoratee.y = x * b + y * d + f;
+	    decoratee.x = x * a + y * c + e || 0;
+	    decoratee.y = x * b + y * d + f || 0;
 	    return decoratee;
 	  };
 
 	  return Matrix2D;
 	}();
-	function getGlobalMatrix(element, inverse) {
-	  if (!element || !element.parentNode) {
+	function getGlobalMatrix(element, inverse, adjustGOffset) {
+	  if (!element || !element.parentNode || (_doc || _setDoc(element)).documentElement === element) {
 	    return new Matrix2D();
 	  }
 
-	  var svg = _svgOwner(element),
+	  var zeroScales = _forceNonZeroScale(element.parentNode),
+	      svg = _svgOwner(element),
 	      temps = svg ? _svgTemps : _divTemps,
-	      container = _placeSiblings(element),
+	      container = _placeSiblings(element, adjustGOffset),
 	      b1 = temps[0].getBoundingClientRect(),
 	      b2 = temps[1].getBoundingClientRect(),
 	      b3 = temps[2].getBoundingClientRect(),
@@ -923,6 +998,17 @@
 	      m = new Matrix2D((b2.left - b1.left) / 100, (b2.top - b1.top) / 100, (b3.left - b1.left) / 100, (b3.top - b1.top) / 100, b1.left + (isFixed ? 0 : _getDocScrollLeft()), b1.top + (isFixed ? 0 : _getDocScrollTop()));
 
 	  parent.removeChild(container);
+
+	  if (zeroScales) {
+	    b1 = zeroScales.length;
+
+	    while (b1--) {
+	      b2 = zeroScales[b1];
+	      b2.scaleX = b2.scaleY = 0;
+	      b2.renderTransform(1, b2);
+	    }
+	  }
+
 	  return inverse ? m.inverse() : m;
 	}
 
@@ -2650,13 +2736,13 @@
 	  };
 	};
 
-	PathEditor.version = "3.0.4";
+	PathEditor.version = "3.3.3";
 
 	/*!
-	 * MotionPathHelper 3.0.4
+	 * MotionPathHelper 3.3.3
 	 * https://greensock.com
 	 *
-	 * @license Copyright 2008-2019, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2020, GreenSock. All rights reserved.
 	 * Subject to the terms at https://greensock.com/standard-license or for
 	 * Club GreenSock members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -2919,10 +3005,6 @@
 	    };
 
 	    refreshPath = function refreshPath() {
-	      var m = _getConsolidatedMatrix$1(path);
-
-	      animation.vars.motionPath.offsetX = m.e - offset.x;
-	      animation.vars.motionPath.offsetY = m.f - offset.y;
 	      animation.invalidate();
 	      animationToScrub.restart();
 	    };
@@ -2958,10 +3040,12 @@
 	          path: path,
 	          start: vars.start || 0,
 	          end: "end" in vars ? vars.end : 1,
-	          autoRotate: "autoRotate" in vars ? vars.autoRotate : false
+	          autoRotate: "autoRotate" in vars ? vars.autoRotate : false,
+	          align: path,
+	          alignOrigin: vars.alignOrigin
 	        },
 	        duration: vars.duration || 5,
-	        ease: vars.ease || "Power1.easeInOut",
+	        ease: vars.ease || "power1.inOut",
 	        repeat: -1,
 	        repeatDelay: 1,
 	        paused: !vars.path
@@ -2985,7 +3069,11 @@
 	  return new MotionPathHelper(target, vars);
 	};
 
-	MotionPathHelper.version = "3.0.4";
+	MotionPathHelper.editPath = function (path, vars) {
+	  return PathEditor.create(path, vars);
+	};
+
+	MotionPathHelper.version = "3.3.3";
 
 	exports.MotionPathHelper = MotionPathHelper;
 	exports.default = MotionPathHelper;

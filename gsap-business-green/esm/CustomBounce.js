@@ -1,8 +1,8 @@
 /*!
- * CustomBounce 3.0.4
+ * CustomBounce 3.3.3
  * https://greensock.com
  *
- * @license Copyright 2008-2019, GreenSock. All rights reserved.
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -144,9 +144,7 @@ _create = function _create(id, vars) {
   }
 };
 
-export var CustomBounce =
-/*#__PURE__*/
-function () {
+export var CustomBounce = /*#__PURE__*/function () {
   function CustomBounce(id, vars) {
     this.ease = _create(id, vars);
   }
@@ -164,5 +162,5 @@ function () {
   return CustomBounce;
 }();
 _getGSAP() && gsap.registerPlugin(CustomBounce);
-CustomBounce.version = "3.0.4";
+CustomBounce.version = "3.3.3";
 export { CustomBounce as default };

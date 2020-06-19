@@ -5,10 +5,10 @@
 }(this, (function (exports) { 'use strict';
 
 	/*!
-	 * CustomWiggle 3.0.4
+	 * CustomWiggle 3.3.3
 	 * https://greensock.com
 	 *
-	 * @license Copyright 2008-2019, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2020, GreenSock. All rights reserved.
 	 * Subject to the terms at https://greensock.com/standard-license or for
 	 * Club GreenSock members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -158,7 +158,7 @@
 	  return CustomWiggle;
 	}();
 	_getGSAP() && gsap.registerPlugin(CustomWiggle);
-	CustomWiggle.version = "3.0.4";
+	CustomWiggle.version = "3.3.3";
 
 	exports.CustomWiggle = CustomWiggle;
 	exports.default = CustomWiggle;

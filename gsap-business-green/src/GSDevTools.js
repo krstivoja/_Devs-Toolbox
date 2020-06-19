@@ -1,8 +1,8 @@
 /*!
- * GSDevTools 3.0.4
+ * GSDevTools 3.3.3
  * https://greensock.com
  *
- * @license Copyright 2008-2019, GreenSock. All rights reserved.
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -296,9 +296,9 @@ let gsap, _coreInitted, _doc, _docEl, _win, _recordedRoot, Animation, _rootTween
 			_independentRoot = gsap.timeline({data:"indy", autoRemoveChildren:true, smoothChildTiming:true});
 			_independentRoot.kill();
 			_independentRoot._dp = 0; //don't let it revert to the global timeline as its parent.
-			_independentRoot.to({}, {duration:1e16});
+			_independentRoot.to({}, {duration:1e12});
 			_recordedRoot = gsap.timeline({data:"root", id:"Global Timeline", autoRemoveChildren:false, smoothChildTiming:true, parent:_independentRoot});
-			_rootTween = gsap.to(_recordedRoot, 1, {time:1, ease:"none", data:"root", id:"_rootTween", paused:true, immediateRender:false, parent:_independentRoot});
+			_rootTween = gsap.to(_recordedRoot, {duration:1, time:1, ease:"none", data:"root", id:"_rootTween", paused:true, immediateRender:false, parent:_independentRoot});
 
 			_independentRoot._start = gsap.ticker.time;
 			gsap.ticker.add(time => _independentRoot.render(time - _independentRoot._start));
@@ -306,7 +306,7 @@ let gsap, _coreInitted, _doc, _docEl, _win, _recordedRoot, Animation, _rootTween
 			//align the all of the playheads so they're starting at 0 now.
 			_globalTimeline._start += _globalTimeline._time;
 			_recordedRoot._start = _globalTimeline._time = _globalTimeline._tTime = 0;
-			_delayedCall = (delay, callback, params, scope) => gsap.to(callback, {delay:delay, onComplete:callback, onReverseComplete:callback, onCompleteParams:params, onReverseCompleteParams:params, callbackScope:scope, parent:_independentRoot});
+			_delayedCall = (delay, callback, params, scope) => gsap.to(callback, {delay:delay, duration:0, onComplete:callback, onReverseComplete:callback, onCompleteParams:params, onReverseCompleteParams:params, callbackScope:scope, parent:_independentRoot});
 
 			//in case GSDevTools.create() is called before anything is actually on the global timeline, we've gotta update it or else the duration will be 0 and it'll be stuck.
 			_delayedCall(0.01, () => {
@@ -1166,7 +1166,7 @@ let gsap, _coreInitted, _doc, _docEl, _win, _recordedRoot, Animation, _rootTween
 
 
 
-GSDevTools.version = "3.0.4";
+GSDevTools.version = "3.3.3";
 GSDevTools.globalRecordingTime = 2;
 
 GSDevTools.getById = id => id ? _lookup[id] : _rootInstance;

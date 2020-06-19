@@ -21,7 +21,7 @@
 	},
 	    _roundingNum = 1e5,
 	    _round = function _round(value) {
-	  return ~~(value * _roundingNum + (value < 0 ? -.5 : .5)) / _roundingNum;
+	  return Math.round(value * _roundingNum) / _roundingNum || 0;
 	};
 
 	function getRawPath(value) {
@@ -124,7 +124,7 @@
 
 	  if (type === "rect") {
 	    r = attr.rx;
-	    ry = attr.ry;
+	    ry = attr.ry || r;
 	    x = attr.x;
 	    y = attr.y;
 	    w = attr.width - r * 2;
@@ -231,9 +231,7 @@
 	      angleStart = (uy < 0 ? -1 : 1) * Math.acos(ux / _sqrt(temp)),
 	      angleExtent = (ux * vy - uy * vx < 0 ? -1 : 1) * Math.acos((ux * vx + uy * vy) / _sqrt(temp * (vx * vx + vy * vy)));
 
-	  if (isNaN(angleExtent)) {
-	    angleExtent = PI;
-	  }
+	  isNaN(angleExtent) && (angleExtent = PI);
 
 	  if (!sweepFlag && angleExtent > 0) {
 	    angleExtent -= TWOPI;
@@ -497,10 +495,10 @@
 	}
 
 	/*!
-	 * MorphSVGPlugin 3.0.4
+	 * MorphSVGPlugin 3.3.3
 	 * https://greensock.com
 	 *
-	 * @license Copyright 2008-2019, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2020, GreenSock. All rights reserved.
 	 * Subject to the terms at https://greensock.com/standard-license or for
 	 * Club GreenSock members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -1206,7 +1204,7 @@
 	};
 
 	var MorphSVGPlugin = {
-	  version: "3.0.4",
+	  version: "3.3.3",
 	  name: "morphSVG",
 	  register: function register(core, Plugin) {
 	    gsap = core;

@@ -1,8 +1,8 @@
 /*!
- * PathEditor 3.0.4
+ * PathEditor 3.3.3
  * https://greensock.com
  *
- * Copyright 2008-2019, GreenSock. All rights reserved.
+ * Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -556,9 +556,7 @@ _comma = ",",
   return Math.sqrt(x * x + y * y);
 };
 
-var DraggableSVG =
-/*#__PURE__*/
-function () {
+var DraggableSVG = /*#__PURE__*/function () {
   function DraggableSVG(target, vars) {
     this.target = typeof target === "string" ? _doc.querySelectorAll(target)[0] : target;
     this.vars = vars || {};
@@ -691,9 +689,7 @@ function () {
   return DraggableSVG;
 }();
 
-var Anchor =
-/*#__PURE__*/
-function () {
+var Anchor = /*#__PURE__*/function () {
   function Anchor(editor, rawPath, j, i, vars) {
     this.editor = editor;
     this.element = _createSVG("path", editor._selection, {
@@ -767,9 +763,7 @@ function () {
   return Anchor;
 }();
 
-export var PathEditor =
-/*#__PURE__*/
-function () {
+export var PathEditor = /*#__PURE__*/function () {
   function PathEditor(target, vars) {
     vars = vars || {};
 
@@ -1790,5 +1784,5 @@ PathEditor.getSnapFunction = function (vars) {
   };
 };
 
-PathEditor.version = "3.0.4";
+PathEditor.version = "3.3.3";
 export { PathEditor as default };

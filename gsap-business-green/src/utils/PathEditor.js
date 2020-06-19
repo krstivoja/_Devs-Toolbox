@@ -1,8 +1,8 @@
 /*!
- * PathEditor 3.0.4
+ * PathEditor 3.3.3
  * https://greensock.com
  *
- * Copyright 2008-2019, GreenSock. All rights reserved.
+ * Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -1285,6 +1285,6 @@ PathEditor.getSnapFunction = (vars) => { //{gridSize, radius, x, y, width, heigh
 	};
 };
 
-PathEditor.version = "3.0.4";
+PathEditor.version = "3.3.3";
 
 export { PathEditor as default };

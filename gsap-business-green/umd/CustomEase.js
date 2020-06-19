@@ -16,7 +16,7 @@
 	},
 	    _roundingNum = 1e5,
 	    _round = function _round(value) {
-	  return ~~(value * _roundingNum + (value < 0 ? -.5 : .5)) / _roundingNum;
+	  return Math.round(value * _roundingNum) / _roundingNum || 0;
 	};
 	function transformRawPath(rawPath, a, b, c, d, tx, ty) {
 	  var j = rawPath.length,
@@ -91,9 +91,7 @@
 	      angleStart = (uy < 0 ? -1 : 1) * Math.acos(ux / _sqrt(temp)),
 	      angleExtent = (ux * vy - uy * vx < 0 ? -1 : 1) * Math.acos((ux * vx + uy * vy) / _sqrt(temp * (vx * vx + vy * vy)));
 
-	  if (isNaN(angleExtent)) {
-	    angleExtent = PI;
-	  }
+	  isNaN(angleExtent) && (angleExtent = PI);
 
 	  if (!sweepFlag && angleExtent > 0) {
 	    angleExtent -= TWOPI;
@@ -357,10 +355,10 @@
 	}
 
 	/*!
-	 * CustomEase 3.0.4
+	 * CustomEase 3.3.3
 	 * https://greensock.com
 	 *
-	 * @license Copyright 2008-2019, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2020, GreenSock. All rights reserved.
 	 * Subject to the terms at https://greensock.com/standard-license or for
 	 * Club GreenSock members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -721,7 +719,7 @@
 	  return CustomEase;
 	}();
 	_getGSAP() && gsap.registerPlugin(CustomEase);
-	CustomEase.version = "3.0.4";
+	CustomEase.version = "3.3.3";
 
 	exports.CustomEase = CustomEase;
 	exports.default = CustomEase;

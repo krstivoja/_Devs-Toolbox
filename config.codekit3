@@ -7,7 +7,7 @@
 		"uuidString": "22C46C5B-F7FD-46A4-BE53-2823AA87B7CE"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32186",
 "files": {
 	"/assets/css/theme_styles.css": {
 		"aP": 1,
@@ -43,24 +43,13 @@
 		"oAP": "/assets/js/.keep",
 		"oF": 0
 		},
-	"/assets/js/animations.js": {
+	"/assets/js/theme.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/js/animations-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/assets/js/theme_scripts.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/js/theme_scripts-min.js",
+		"oAP": "/assets/js/theme-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -69,138 +58,1490 @@
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_0_base.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_1_layout.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_1_layout.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_2_typography.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_2_typography.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_3_form.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_3_form.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_4_header.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_4_header.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_5_footer.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_5_footer.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_6_page.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_6_page.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_7_archive.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_7_archive.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/scss/_8_single.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/assets/css/_8_single.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
-	"/assets/scss/theme_styles.scss": {
+	"/assets/scss/theme.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/assets/css/theme_styles.css",
-		"oF": 1,
+		"oAP": "/assets/css/theme.css",
+		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
-	"/inc/cpt_and_tax.php": {
+	"/custom_theme.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/inc/cpt_and_tax.php",
+		"oAP": "/custom_theme.php",
+		"oF": 0
+		},
+	"/gsap-business-green/docs-link.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/docs-link.html",
+		"oF": 0
+		},
+	"/gsap-business-green/esm/all.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/all-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/CSSPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/CSSPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/CSSRulePlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/CSSRulePlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/CustomBounce.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/CustomBounce-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/CustomEase.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/CustomEase-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/CustomWiggle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/CustomWiggle-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/Draggable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/Draggable-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/DrawSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/DrawSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/EaselPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/EaselPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/EasePack.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/EasePack-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/gsap-core.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/gsap-core-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/GSDevTools.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/GSDevTools-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/index-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/InertiaPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/InertiaPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/MorphSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/MorphSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/MotionPathHelper.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/MotionPathHelper-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/MotionPathPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/MotionPathPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/Physics2DPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/Physics2DPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/PhysicsPropsPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/PhysicsPropsPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/PixiPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/PixiPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/ScrambleTextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/ScrambleTextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/ScrollToPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/ScrollToPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/ScrollTrigger.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/ScrollTrigger-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/SplitText.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/SplitText-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/TextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/TextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/utils/matrix.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/utils/matrix-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/utils/PathEditor.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/utils/PathEditor-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/utils/paths.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/utils/paths-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/utils/strings.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/utils/strings-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/esm/utils/VelocityTracker.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/esm/utils/VelocityTracker-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/getting-started-link.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/getting-started-link.html",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/CSSRulePlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/CSSRulePlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/CSSRulePlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/CSSRulePlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/CustomBounce.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/CustomBounce.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/CustomBounce.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/CustomBounce.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/CustomEase.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/CustomEase.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/CustomEase.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/CustomEase.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/CustomWiggle.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/CustomWiggle.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/CustomWiggle.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/CustomWiggle.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/Draggable.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/Draggable.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/Draggable.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/Draggable.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/DrawSVGPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/DrawSVGPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/DrawSVGPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/DrawSVGPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/EaselPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/EaselPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/EaselPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/EaselPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/EasePack.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/EasePack.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/EasePack.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/EasePack.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/gsap.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/gsap.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/gsap.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/gsap.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/GSDevTools.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/GSDevTools.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/GSDevTools.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/GSDevTools.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/InertiaPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/InertiaPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/InertiaPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/InertiaPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/MorphSVGPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/MorphSVGPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/MorphSVGPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/MorphSVGPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/MotionPathHelper.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/MotionPathHelper.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/MotionPathHelper.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/MotionPathHelper.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/MotionPathPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/MotionPathPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/MotionPathPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/MotionPathPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/Physics2DPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/Physics2DPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/Physics2DPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/Physics2DPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/PhysicsPropsPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/PhysicsPropsPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/PhysicsPropsPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/PhysicsPropsPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/PixiPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/PixiPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/PixiPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/PixiPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/ScrambleTextPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/ScrambleTextPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/ScrambleTextPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/ScrambleTextPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/ScrollToPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/ScrollToPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/ScrollToPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/ScrollToPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/ScrollTrigger.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/ScrollTrigger.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/ScrollTrigger.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/ScrollTrigger.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/SplitText.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/SplitText.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/SplitText.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/SplitText.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/minified/TextPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/minified/TextPlugin.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/minified/TextPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/minified/TextPlugin.min.js.map",
+		"oF": 0
+		},
+	"/gsap-business-green/npm-install-this/gsap-bonus.tgz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/gsap-business-green/npm-install-this/gsap-bonus.tgz",
+		"oF": 0
+		},
+	"/gsap-business-green/src/all.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/all-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/CSSPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/CSSPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/CSSRulePlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/CSSRulePlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/CustomBounce.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/CustomBounce-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/CustomEase.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/CustomEase-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/CustomWiggle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/CustomWiggle-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/Draggable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/Draggable-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/DrawSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/DrawSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/EaselPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/EaselPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/EasePack.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/EasePack-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/gsap-core.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/gsap-core-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/GSDevTools.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/GSDevTools-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/index.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/index-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/InertiaPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/InertiaPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/MorphSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/MorphSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/MotionPathHelper.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/MotionPathHelper-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/MotionPathPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/MotionPathPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/Physics2DPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/Physics2DPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/PhysicsPropsPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/PhysicsPropsPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/PixiPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/PixiPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/ScrambleTextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/ScrambleTextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/ScrollToPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/ScrollToPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/ScrollTrigger.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/ScrollTrigger-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/SplitText.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/SplitText-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/TextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/TextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/utils/matrix.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/utils/matrix-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/utils/PathEditor.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/utils/PathEditor-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/utils/paths.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/utils/paths-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/utils/strings.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/utils/strings-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/src/utils/VelocityTracker.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/src/utils/VelocityTracker-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/CSSRulePlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/CSSRulePlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/CustomBounce.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/CustomBounce-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/CustomEase.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/CustomEase-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/CustomWiggle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/CustomWiggle-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/Draggable.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/Draggable-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/DrawSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/DrawSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/EaselPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/EaselPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/EasePack.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/EasePack-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/gsap.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/gsap-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/GSDevTools.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/GSDevTools-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/InertiaPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/InertiaPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/MorphSVGPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/MorphSVGPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/MotionPathHelper.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/MotionPathHelper-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/MotionPathPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/MotionPathPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/Physics2DPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/Physics2DPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/PhysicsPropsPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/PhysicsPropsPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/PixiPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/PixiPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/ScrambleTextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/ScrambleTextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/ScrollToPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/ScrollToPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/ScrollTrigger.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/ScrollTrigger-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/SplitText.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/SplitText-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/gsap-business-green/umd/TextPlugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/gsap-business-green/umd/TextPlugin-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index.php",
 		"oF": 0
 		},
 	"/node_modules": {
@@ -209,13 +1550,21 @@
 		"oAP": "/build/node_modules",
 		"oF": 0
 		},
-	"/plugin.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/plugin.php",
-		"oF": 0
+	"/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		}
 	},
 "hooks": [
@@ -224,7 +1573,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 595547637.43041503,
-	"displayValue": "_Devs-Toolbox-1.2.0",
+	"displayValue": "_Devs-Toolbox",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_teal",
 	"iconImageWasSetByUser": 0
@@ -767,6 +2116,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"default-case-last": {
+			"active": 0,
+			"optionString": ""
+			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -822,6 +2175,10 @@
 		"global-require": {
 			"active": 0,
 			"optionString": ""
+			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
 			},
 		"guard-for-in": {
 			"active": 0,
@@ -999,6 +2356,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1024,6 +2385,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1167,6 +2532,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-loss-of-precision": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -1283,6 +2652,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-restricted-exports": {
+			"active": 0,
+			"optionString": "{'restrictedNamedExports': []}"
+			},
 		"no-restricted-globals": {
 			"active": 0,
 			"optionString": "'event', 'fdescribe'"
@@ -1325,6 +2698,10 @@
 			},
 		"no-sequences": {
 			"active": 0,
+			"optionString": ""
+			},
+		"no-setter-return": {
+			"active": 1,
 			"optionString": ""
 			},
 		"no-shadow": {
@@ -1422,6 +2799,10 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-backreference": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,
@@ -1530,6 +2911,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
@@ -2227,13 +3612,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
+		"compilerType": 1,
 		"createSourceMap": 1,
-		"debugStyle": 0,
 		"decimalPrecision": 10,
+		"emitCharset": 1,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"shouldRunBless": 1
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,

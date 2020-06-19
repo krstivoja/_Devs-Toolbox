@@ -1,8 +1,8 @@
 /*!
- * MotionPathHelper 3.0.4
+ * MotionPathHelper 3.3.3
  * https://greensock.com
  *
- * @license Copyright 2008-2019, GreenSock. All rights reserved.
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -180,9 +180,9 @@ export class MotionPathHelper {
 		};
 
 		refreshPath = () => {
-			let m = _getConsolidatedMatrix(path);
-			animation.vars.motionPath.offsetX = m.e - offset.x;
-			animation.vars.motionPath.offsetY = m.f - offset.y;
+			//let m = _getConsolidatedMatrix(path);
+			//animation.vars.motionPath.offsetX = m.e - offset.x;
+			//animation.vars.motionPath.offsetY = m.f - offset.y;
 			animation.invalidate();
 			animationToScrub.restart();
 		};
@@ -206,14 +206,15 @@ export class MotionPathHelper {
 		} else {
 			animation = animationToScrub = gsap.to(target, {
 				motionPath: {
-					path:path,
+					path: path,
 					start: vars.start || 0,
 					end: ("end" in vars) ? vars.end : 1,
-					autoRotate: ("autoRotate" in vars) ? vars.autoRotate : false
-					//align: path
+					autoRotate: ("autoRotate" in vars) ? vars.autoRotate : false,
+					align: path,
+					alignOrigin: vars.alignOrigin
 				},
 				duration: vars.duration || 5,
-				ease: vars.ease || "Power1.easeInOut",
+				ease: vars.ease || "power1.inOut",
 				repeat:-1,
 				repeatDelay:1,
 				paused:!vars.path
@@ -230,6 +231,7 @@ export class MotionPathHelper {
 
 MotionPathHelper.register = _initCore;
 MotionPathHelper.create = (target, vars) => new MotionPathHelper(target, vars);
-MotionPathHelper.version = "3.0.4";
+MotionPathHelper.editPath = (path, vars) => PathEditor.create(path, vars);
+MotionPathHelper.version = "3.3.3";
 
 export { MotionPathHelper as default };

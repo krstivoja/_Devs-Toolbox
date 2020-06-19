@@ -1,8 +1,8 @@
 /*!
- * GSDevTools 3.0.4
+ * GSDevTools 3.3.3
  * https://greensock.com
  *
- * @license Copyright 2008-2019, GreenSock. All rights reserved.
+ * @license Copyright 2008-2020, GreenSock. All rights reserved.
  * Subject to the terms at https://greensock.com/standard-license or for
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
@@ -430,7 +430,7 @@ _merge = function _merge() {
     _independentRoot._dp = 0; //don't let it revert to the global timeline as its parent.
 
     _independentRoot.to({}, {
-      duration: 1e16
+      duration: 1e12
     });
 
     _recordedRoot = gsap.timeline({
@@ -440,7 +440,8 @@ _merge = function _merge() {
       smoothChildTiming: true,
       parent: _independentRoot
     });
-    _rootTween = gsap.to(_recordedRoot, 1, {
+    _rootTween = gsap.to(_recordedRoot, {
+      duration: 1,
       time: 1,
       ease: "none",
       data: "root",
@@ -460,6 +461,7 @@ _merge = function _merge() {
     _delayedCall = function _delayedCall(delay, callback, params, scope) {
       return gsap.to(callback, {
         delay: delay,
+        duration: 0,
         onComplete: callback,
         onReverseComplete: callback,
         onCompleteParams: params,
@@ -1548,7 +1550,7 @@ _merge = function _merge() {
 }; //if on startup, someone does a timeline.seek(), we need to honor it, so when initialize() is called, it'll check the _recordedRoot._start so that we can use that as an offset. Remember, however, that we call initialize() twice on startup, once after a tick has elapsed just in case someone called GSDevTools.create() before their animation code, so we must record the value (once).
 
 
-GSDevTools.version = "3.0.4";
+GSDevTools.version = "3.3.3";
 GSDevTools.globalRecordingTime = 2;
 
 GSDevTools.getById = function (id) {

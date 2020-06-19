@@ -99,15 +99,10 @@
 	  var _proto = VelocityTracker.prototype;
 
 	  _proto.get = function get(property, skipRecentTick) {
-	    var pt = this._props[property],
+	    var pt = this._props[property] || console.warn("Not tracking " + property + " velocity."),
 	        val,
 	        dif,
 	        rotationCap;
-
-	    if (!pt) {
-	      console.warn("Not tracking " + property + " velocity.");
-	    }
-
 	    val = parseFloat(skipRecentTick ? pt.v1 : pt.g(pt.t, pt.p));
 	    dif = val - parseFloat(pt.v2);
 	    rotationCap = pt.rCap;
@@ -249,10 +244,10 @@
 	_getGSAP() && gsap.registerPlugin(VelocityTracker);
 
 	/*!
-	 * InertiaPlugin 3.0.4
+	 * InertiaPlugin 3.3.3
 	 * https://greensock.com
 	 *
-	 * @license Copyright 2008-2019, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2020, GreenSock. All rights reserved.
 	 * Subject to the terms at https://greensock.com/standard-license or for
 	 * Club GreenSock members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -269,6 +264,7 @@
 	    _getCache$1,
 	    _checkPointRatio,
 	    _clamp,
+	    _processingVars,
 	    _getTracker = VelocityTracker.getByTarget,
 	    _getGSAP$1 = function _getGSAP() {
 	  return gsap$1 || typeof window !== "undefined" && (gsap$1 = window.gsap) && gsap$1.registerPlugin && gsap$1;
@@ -304,6 +300,17 @@
 	  }
 
 	  return obj;
+	},
+	    _deepClone = function _deepClone(obj) {
+	  var copy = {},
+	      p,
+	      v;
+
+	  for (p in obj) {
+	    copy[p] = _isObject(v = obj[p]) ? _deepClone(v) : v;
+	  }
+
+	  return copy;
 	},
 	    _getClosest = function _getClosest(n, values, max, min, radius) {
 	  var i = values.length,
@@ -455,9 +462,7 @@
 	    recordEnd = 0;
 	  }
 
-	  if (_isString(target)) {
-	    target = _toArray$1(target)[0];
-	  }
+	  _isString(target) && (target = _toArray$1(target)[0]);
 
 	  if (!target) {
 	    return 0;
@@ -516,6 +521,7 @@
 	          curProp = _parseEnd(curProp, linkedProps && p in linkedProps ? linkedProps : end, curProp.max, curProp.min, p, inertiaVars.radius);
 
 	          if (recordEnd) {
+	            _processingVars === vars && (_processingVars = inertiaVars = _deepClone(vars));
 	            inertiaVars[p] = _extend(curProp, inertiaVars[p], "end");
 	          }
 	        }
@@ -536,21 +542,14 @@
 	          }
 	        }
 
-	        if (curClippedDuration > duration) {
-	          duration = curClippedDuration;
-	        }
+	        curClippedDuration > duration && (duration = curClippedDuration);
 	      }
 
-	      if (curDuration > duration) {
-	        duration = curDuration;
-	      }
+	      curDuration > duration && (duration = curDuration);
 	    }
 	  }
 
-	  if (duration > clippedDuration) {
-	    duration = clippedDuration;
-	  }
-
+	  duration > clippedDuration && (duration = clippedDuration);
 	  return duration > maxDuration ? maxDuration : duration < minDuration ? minDuration : duration;
 	},
 	    _initCore$1 = function _initCore() {
@@ -569,7 +568,9 @@
 	      resistance: 100,
 	      unitFactors: {
 	        time: 1000,
-	        totalTime: 1000
+	        totalTime: 1000,
+	        progress: 1000,
+	        totalProgress: 1000
 	      }
 	    });
 	    _config = gsap$1.config();
@@ -579,7 +580,7 @@
 	};
 
 	var InertiaPlugin = {
-	  version: "3.0.4",
+	  version: "3.3.3",
 	  name: "inertia",
 	  register: function register(core) {
 	    gsap$1 = core;
@@ -587,9 +588,7 @@
 	    _initCore$1();
 	  },
 	  init: function init(target, vars, tween, index, targets) {
-	    if (!_coreInitted$1) {
-	      _initCore$1();
-	    }
+	    _coreInitted$1 || _initCore$1();
 
 	    var tracker = _getTracker(target);
 
@@ -604,6 +603,7 @@
 
 	    this.target = target;
 	    this.tween = tween;
+	    _processingVars = vars;
 
 	    var cache = target._gsap,
 	        getVal = cache.get,
@@ -611,7 +611,7 @@
 	        durIsObj = _isObject(dur),
 	        preventOvershoot = vars.preventOvershoot || durIsObj && dur.overshoot === 0,
 	        resistance = _getNumOrDefault(vars, "resistance", _config.resistance),
-	        duration = _isNumber(dur) ? dur : _calculateTweenDuration(target, vars, durIsObj && dur.max || 10, durIsObj && dur.min || 0.2, durIsObj && "overshoot" in dur ? +dur.overshoot : preventOvershoot ? 0 : 1),
+	        duration = _isNumber(dur) ? dur : _calculateTweenDuration(target, vars, durIsObj && dur.max || 10, durIsObj && dur.min || 0.2, durIsObj && "overshoot" in dur ? +dur.overshoot : preventOvershoot ? 0 : 1, true),
 	        p,
 	        curProp,
 	        curVal,
@@ -622,15 +622,14 @@
 	        change2,
 	        linkedProps;
 
+	    vars = _processingVars;
+	    _processingVars = 0;
 	    linkedProps = _processLinkedProps(target, vars, getVal, resistance);
 
 	    for (p in vars) {
 	      if (!_reservedProps[p]) {
 	        curProp = vars[p];
-
-	        if (_isFunction(curProp)) {
-	          curProp = curProp(index, target, targets);
-	        }
+	        _isFunction(curProp) && (curProp = curProp(index, target, targets));
 
 	        if (_isNumber(curProp)) {
 	          velocity = curProp;
